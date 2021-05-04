@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EndlessRunner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Endless Runner" Height="450" Width="800">
+    <Canvas Name="MyCanvas" Focusable="true" KeyUp="KeyIsUp" KeyDown="KeyIsDown" Background="AliceBlue">
+
+        <Rectangle Name="Background" Height="400" Width="1262" Fill="orange" Canvas.Left="0"/>
+        <Rectangle Name="Background2" Height="400" Width="1262" Fill="LightGreen" Canvas.Left="1262"/>
+
+        <Rectangle Name="Ground" Height="32" Width="792" Fill="black" Canvas.Top="387" Canvas.Left="0"/>
+
+        <Rectangle Name="Player" Height="99" Width="62" Fill="Brown" Canvas.Top="151" Canvas.Left="110"/>
         
-    </Grid>
+        <Rectangle Name="Obstacle" Height="178" Width="50" Fill="Red" Canvas.Top="326" Canvas.Left="721"/>
+
+        <Label Name="ScoreText" FontSize="32" FontWeight="Bold" Content="Score: 0"/>
+
+    </Canvas>
 </Window>
